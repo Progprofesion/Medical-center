@@ -1,11 +1,11 @@
-.mainPage {
-  width: 1240px;
-  height: 1024px;
+.header {
+  max-width: 1440px;
   margin: 0 auto;
   &__header {
     display: flex;
     align-items: center;
     height: 80px;
+    padding: 0 70px;
     border-bottom: 1px solid black;
   }
   &__content {
@@ -24,7 +24,7 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 160% */
+    line-height: 24px;
     letter-spacing: 0.2px;
     border: none;
   }

@@ -1,4 +1,6 @@
-import MainPage from "../mainPage/MainPage";
+import MainPage from "../pages/MainPage";
+// import AccountPage from "../pages/AccountPage";
+// import ContactsPage from "../pages/ContactsPage";
 
 import "./app.scss";
 

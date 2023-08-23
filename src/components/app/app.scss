@@ -4,6 +4,7 @@
 }
 button {
   all: unset;
+  cursor: pointer;
 }
 
 button:focus {
@@ -12,5 +13,5 @@ button:focus {
 
 .container {
   margin: 0 auto;
-  max-width: 1224px;
+  max-width: 1046px;
 }

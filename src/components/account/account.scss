@@ -1,0 +1,45 @@
+.account {
+  margin-top: 80px;
+  &__title {
+    color: var(--text-color, #252b42);
+    font-family: Montserrat;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 35px;
+  }
+  &__exit {
+    max-width: 228px;
+    height: 52px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: var(--primary-color, #ff685b);
+    color: var(--light-text-color, #fff);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+  &__contacts {
+    max-width: 239px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color, #ff685b);
+    color: var(--primary-color, #ff685b);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+}

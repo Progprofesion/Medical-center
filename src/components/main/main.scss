@@ -1,0 +1,51 @@
+.main {
+  &__title {
+    width: 727px;
+    margin-top: 80px;
+    color: var(--text-color, #252b42);
+    font-family: Montserrat;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+  }
+  &__buttons {
+    margin-top: 35px;
+  }
+  &__enter {
+    width: 128px;
+    height: 52px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: var(--primary-color, #ff685b);
+    color: var(--light-text-color, #fff);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+  &__contacts {
+    width: 155px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid #ff685b;
+    background: #fff;
+    color: #ff685b;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+  &__cardsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+  }
+}
