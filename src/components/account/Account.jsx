@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../buttons/Button";
 import "./account.scss";
 const Account = () => {
@@ -9,9 +10,9 @@ const Account = () => {
         </h2>
         <div className="account__buttons">
           <Button className="account__exit" title="Выйти из аккаунта" />
-          <Button className="account__contacts" title="Перейти в контакты" />
-          {/* <button className="account__exit">Выйти из аккаунта</button>
-          <button className="account__contacts">Перейти в контакты</button> */}
+          <Link to="/contacts">
+            <Button className="account__contacts" title="Перейти в контакты" />
+          </Link>
         </div>
       </div>
     </section>

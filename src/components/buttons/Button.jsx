@@ -1,11 +1,17 @@
 import { useDispatch } from "react-redux";
-import { setModalActive } from "../../store/slices/userSlice";
+import { setModalActive, removeUser } from "../../store/slices/userSlice";
+import { useNavigate } from "react-router-dom";
 const Button = ({ title, className }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <button
-      onClick={() => dispatch(setModalActive(true))}
+      onClick={() =>
+        localStorage.getItem("login")
+          ? dispatch(removeUser()) && navigate("/")
+          : dispatch(setModalActive(true))
+      }
       className={className}
     >
       {title}

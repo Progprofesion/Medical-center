@@ -11,7 +11,10 @@ const main = () => {
       <div className="container">
         <h1 className="main__title">Место для получения медицинской помощи</h1>
         <div className="main__buttons">
-          <Button title="Войти" className="main__enter" />
+          <Button
+            title={localStorage.getItem("login") ? "Выйти" : "Войти"}
+            className="main__enter"
+          />
           <Button title="Контакты" className="main__contacts" />
         </div>
         <div className="main__cardsWrapper">

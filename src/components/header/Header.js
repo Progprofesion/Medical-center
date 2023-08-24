@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -7,6 +7,8 @@ import {
   setLogin,
   setPassword,
   setModalActive,
+  removeUser,
+  setAuth,
 } from "../../store/slices/userSlice";
 import Modal from "../modal/Modal";
 import Button from "../buttons/Button";
@@ -35,6 +37,8 @@ const Header = () => {
         localStorage.setItem("login", login);
         localStorage.setItem("password", password);
         dispatch(setModalActive(false));
+        dispatch(setAuth(true));
+        localStorage.setItem("auth", true);
         return navigate("/account");
       } else {
         console.log("Неверный логин");
@@ -48,10 +52,11 @@ const Header = () => {
         <div className="header__content">
           <img src={logo} alt="Logo" className="header__img" />
           <div className="header__buttons">
-            <Button title="Контакты" className="header__contacts" />
+            <Link to="/contacts">
+              <Button title="Контакты" className="header__contacts" />
+            </Link>
             <Button
-              title="Войти"
-              setModalActive={() => setModalActive(true)}
+              title={localStorage.getItem("login") ? "Выйти" : "Войти"}
               className="header__enter"
             />
           </div>

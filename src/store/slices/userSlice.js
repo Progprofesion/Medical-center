@@ -5,6 +5,7 @@ const initialState = {
   login: localStorage.getItem("login") || null,
   password: localStorage.getItem("passowrd") || null,
   modalActive: false,
+  auth: false,
 };
 
 const userSlice = createSlice({
@@ -24,10 +25,14 @@ const userSlice = createSlice({
       state.login = null;
       state.password = null;
       localStorage.setItem("login", "");
-      localStorage.setItem("passowrd", "");
+      localStorage.setItem("password", "");
+      localStorage.setItem("auth", "");
     },
     setModalActive: (state, action) => {
       state.modalActive = action.payload;
+    },
+    setAuth: (state, action) => {
+      state.auth = action.payload;
     },
   },
 });
@@ -38,6 +43,7 @@ export const {
   setPassword,
   removeUser,
   setModalActive,
+  setAuth,
 } = userSlice.actions;
 
 export default userSlice.reducer;
