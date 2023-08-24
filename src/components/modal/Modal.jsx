@@ -1,9 +1,16 @@
 import "./modal.scss";
-const Modal = () => {
+const Modal = ({ active, setActive, children }) => {
   return (
-    <section className="modal">
-      <input type="text" className="modal__login" />
-      <input type="text" className="modal__login" />
+    <section
+      className={active ? "modal active" : "modal"}
+      onClick={() => setActive(false)}
+    >
+      <div
+        className={active ? "modal__content active" : "modal__content"}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {children}
+      </div>
     </section>
   );
 };

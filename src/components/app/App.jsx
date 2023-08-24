@@ -4,7 +4,7 @@ import MainPage from "../pages/MainPage";
 
 import "./app.scss";
 
-const app = () => {
+const App = () => {
   return (
     <main className="app">
       <MainPage />
@@ -12,4 +12,4 @@ const app = () => {
   );
 };
 
-export default app;
+export default App;
