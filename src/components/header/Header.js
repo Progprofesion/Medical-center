@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Modal from "../modal/Modal";
+import Button from "../buttons/Button";
 import logo from "../../assets/icon/logo.svg";
 
 import "./header.scss";
 const Header = () => {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
 
   return (
     <header className="header">
@@ -12,19 +13,24 @@ const Header = () => {
         <div className="header__content">
           <img src={logo} alt="Logo" className="header__img" />
           <div className="header__buttons">
-            <button className="header__contacts">Контакты</button>
-            <button
+            <Button title="Контакты" className="header__contacts" />
+            <Button
+              title="Войти"
+              setModalActive={() => setModalActive(true)}
               className="header__enter"
-              onClick={() => setModalActive(true)}
-            >
-              Войти
-            </button>
+            />
           </div>
         </div>
       </div>
       <Modal active={modalActive} setActive={setModalActive}>
-        <input type="text" className="modal__login" />
-        <input type="text" className="modal__login" />
+        Имя
+        <input placeholder="Введите имя" type="text" className="modal__login" />
+        Пароль
+        <input
+          placeholder="Введите пароль"
+          type="text"
+          className="modal__login"
+        />
       </Modal>
     </header>
   );

@@ -1,4 +1,5 @@
 import Card from "../card/Card";
+import Button from "../buttons/Button";
 import cardiogram from "../../assets/icon/cardiogram.svg";
 import stethoscope from "../../assets/icon/stethoscope.svg";
 import medicalhistory from "../../assets/icon/medical-history.svg";
@@ -10,8 +11,8 @@ const main = () => {
       <div className="container">
         <h1 className="main__title">Место для получения медицинской помощи</h1>
         <div className="main__buttons">
-          <button className="main__enter">Войти</button>
-          <button className="main__contacts">Контакты</button>
+          <Button title="Войти" className="main__enter" />
+          <Button title="Контакты" className="main__contacts" />
         </div>
         <div className="main__cardsWrapper">
           <Card img={cardiogram} title="Онлайн-прием" />

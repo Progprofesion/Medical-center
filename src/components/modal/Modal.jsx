@@ -1,12 +1,16 @@
+import { useDispatch, useSelector } from "react-redux";
+import { setModalActive } from "../../store/slices/userSlice";
 import "./modal.scss";
-const Modal = ({ active, setActive, children }) => {
+const Modal = ({ children }) => {
+  const dispatch = useDispatch();
+  const modalActive = useSelector((state) => state.user.modalActive);
   return (
     <section
-      className={active ? "modal active" : "modal"}
-      onClick={() => setActive(false)}
+      className={modalActive ? "modal active" : "modal"}
+      onClick={() => dispatch(setModalActive(false))}
     >
       <div
-        className={active ? "modal__content active" : "modal__content"}
+        className={modalActive ? "modal__content active" : "modal__content"}
         onClick={(e) => e.stopPropagation()}
       >
         {children}
