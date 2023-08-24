@@ -14,7 +14,7 @@
     margin-top: 35px;
   }
   &__exit {
-    max-width: 228px;
+    width: 228px;
     height: 52px;
     margin-right: 10px;
     border-radius: 5px;
@@ -29,7 +29,7 @@
     letter-spacing: 0.2px;
   }
   &__contacts {
-    max-width: 239px;
+    width: 239px;
     height: 52px;
     border-radius: 5px;
     border: 1px solid var(--primary-color, #ff685b);

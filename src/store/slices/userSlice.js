@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  email: localStorage.getItem("userEmail") || null,
-  token: localStorage.getItem("accessToken") || null,
-  id: localStorage.getItem("id") || null,
+  dataUsers: null,
+  login: localStorage.getItem("login") || null,
+  password: localStorage.getItem("passowrd") || null,
   modalActive: false,
 };
 
@@ -11,18 +11,20 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (state, action) => {
-      state.email = action.payload.email;
-      state.token = action.payload.token;
-      state.id = action.payload.id;
+    setDataUsers: (state, action) => {
+      state.dataUsers = action.payload;
+    },
+    setLogin: (state, action) => {
+      state.login = action.payload;
+    },
+    setPassword: (state, action) => {
+      state.password = action.payload;
     },
     removeUser: (state) => {
-      state.email = null;
-      state.token = null;
-      state.id = null;
-      localStorage.setItem("userEmail", "");
-      localStorage.setItem("accessToken", "");
-      localStorage.setItem("id", "");
+      state.login = null;
+      state.password = null;
+      localStorage.setItem("login", "");
+      localStorage.setItem("passowrd", "");
     },
     setModalActive: (state, action) => {
       state.modalActive = action.payload;
@@ -30,6 +32,12 @@ const userSlice = createSlice({
   },
 });
 
-export const { setUser, removeUser, setModalActive } = userSlice.actions;
+export const {
+  setDataUsers,
+  setLogin,
+  setPassword,
+  removeUser,
+  setModalActive,
+} = userSlice.actions;
 
 export default userSlice.reducer;
