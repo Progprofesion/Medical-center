@@ -1,6 +1,7 @@
 .card {
   width: 328px;
   height: 248px;
+  margin-top: 40px;
   padding: 35px 40px;
   background: var(--light-background-color, #fff);
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
@@ -21,18 +22,16 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     letter-spacing: 0.1px;
   }
   &__subtitle {
     color: var(--second-text-color, #737373);
-
-    /* paragraph */
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
     letter-spacing: 0.2px;
   }
   span {

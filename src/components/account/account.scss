@@ -29,6 +29,9 @@
     letter-spacing: 0.2px;
   }
   &__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 239px;
     height: 52px;
     border-radius: 5px;

@@ -13,8 +13,8 @@ const Header = () => {
         <div className="header__content">
           <img src={logo} alt="Logo" className="header__img" />
           <div className="header__buttons">
-            <Link to="/contacts">
-              <Button title="Контакты" className="header__contacts" />
+            <Link className="header__contacts" to="/contacts">
+              Контакты
             </Link>
             <Button
               title={localStorage.getItem("login") ? "Выйти" : "Войти"}

@@ -32,7 +32,6 @@ const Form = () => {
   const dataUsers = useSelector((state) => state.user.dataUsers);
   const login = useSelector((state) => state.user.login);
   const password = useSelector((state) => state.user.password);
-  const auth = useSelector((state) => state.user.auth);
 
   const navigate = useNavigate();
 
@@ -51,7 +50,7 @@ const Form = () => {
       }
     });
   };
-  console.log(auth);
+
   return (
     <form className="modal__form" action="">
       Имя

@@ -10,8 +10,8 @@ const Account = () => {
         </h2>
         <div className="account__buttons">
           <Button className="account__exit" title="Выйти из аккаунта" />
-          <Link to="/contacts">
-            <Button className="account__contacts" title="Перейти в контакты" />
+          <Link className="account__contacts" to="/contacts">
+            Перейти в контакты
           </Link>
         </div>
       </div>
