@@ -1,51 +1,12 @@
-import { useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-import {
-  setDataUsers,
-  setLogin,
-  setPassword,
-  setModalActive,
-  removeUser,
-  setAuth,
-} from "../../store/slices/userSlice";
+import Form from "../form/Form";
 import Modal from "../modal/Modal";
 import Button from "../buttons/Button";
 import logo from "../../assets/icon/logo.svg";
 
 import "./header.scss";
 const Header = () => {
-  const dataUsers = useSelector((state) => state.user.dataUsers);
-  const login = useSelector((state) => state.user.login);
-  const password = useSelector((state) => state.user.password);
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch("http://localhost:3001/users")
-      .then((response) => response.json())
-      .then((data) => dispatch(setDataUsers(data)))
-      .catch((error) => console.log("Ошибка загрузки данных:", error));
-  }, [dispatch]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dataUsers.forEach((data) => {
-      if (data.login === login && data.password === password) {
-        localStorage.setItem("login", login);
-        localStorage.setItem("password", password);
-        dispatch(setModalActive(false));
-        dispatch(setAuth(true));
-        localStorage.setItem("auth", true);
-        return navigate("/account");
-      } else {
-        console.log("Неверный логин");
-      }
-    });
-  };
-
   return (
     <header className="header">
       <div className="header__header">
@@ -63,27 +24,7 @@ const Header = () => {
         </div>
       </div>
       <Modal>
-        <form className="modal__form" action="">
-          Имя
-          <input
-            onChange={(e) => dispatch(setLogin(e.target.value))}
-            placeholder="Введите имя"
-            type="text"
-          />
-          Пароль
-          <input
-            onChange={(e) => dispatch(setPassword(e.target.value))}
-            placeholder="Введите пароль"
-            type="text"
-          />
-          <button
-            onClick={(e) => handleSubmit(e)}
-            className="modal__submit"
-            type="submit"
-          >
-            Войти
-          </button>
-        </form>
+        <Form />
       </Modal>
     </header>
   );

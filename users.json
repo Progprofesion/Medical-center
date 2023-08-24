@@ -3,31 +3,31 @@
         {
             "id": 0,
             "login": "Alex",
-            "password": "AlexAlex",
+            "password": "AlexAlexAlex",
             "name": "Alex"
         },
         {
             "id": 1,
             "login": "George",
-            "password": "GeorgeGeorge",
+            "password": "GeorgeGeorgeGeorge",
             "name": "George"
         },
         {
             "id": 2,
             "login": "Michael",
-            "password": "MichaelMichael",
+            "password": "MichaelMichaelMichael",
             "name": "Michael"
         },
         {
             "id": 3,
             "login": "John",
-            "password": "JohnJohn",
+            "password": "JohnJohnJohn",
             "name": "John"
         },
         {
             "id": 4,
             "login": "Ivan",
-            "password": "IvanIvan",
+            "password": "IvanIvanIvan",
             "name": "Ivan"
         }
     ]
