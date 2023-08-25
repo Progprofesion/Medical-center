@@ -14,10 +14,7 @@ const main = () => {
           Место для получения <br /> медицинской помощи
         </h1>
         <div className="main__buttons">
-          <Button
-            title={localStorage.getItem("login") ? "Выйти" : "Войти"}
-            className="main__enter"
-          />
+          <Button className="main__enter" />
           <Link className="main__contacts" to="/contacts">
             Контакты
           </Link>

@@ -3,10 +3,10 @@ import { lazy, Suspense } from "react";
 import { useSelector } from "react-redux";
 
 import "./app.scss";
-import MainPage from "../pages/MainPage";
-// import AccountPage from "../pages/AccountPage";
+const MainPage = lazy(() => import("../pages/MainPage"));
 const AccountPage = lazy(() => import("../pages/AccountPage"));
 const ContactsPage = lazy(() => import("../pages/ContactsPage"));
+const Page404 = lazy(() => import("../pages/Page404"));
 
 const App = () => {
   const auth = useSelector((state) => state.user.auth);
@@ -22,7 +22,7 @@ const App = () => {
               "null"
             )}
             <Route path="/contacts" element={<ContactsPage />} />
-            <Route path="*" element={"Такой страницы не существует"} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
         </Suspense>
       </main>

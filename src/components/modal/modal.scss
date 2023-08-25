@@ -22,26 +22,6 @@
     transition: 0.4s all;
     width: 50vw;
   }
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__submit {
-    margin-top: 10px;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    background: var(--primary-color, #ff685b);
-    color: var(--light-text-color, #fff);
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0.2px;
-  }
 }
 
 .modal.active {

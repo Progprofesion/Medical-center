@@ -1,10 +1,8 @@
 .main {
   &__title {
     margin-top: 80px;
-    color: var(--text-color, #252b42);
-    font-family: Montserrat;
+    color: var(--text-color);
     font-size: 58px;
-    font-style: normal;
     font-weight: 700;
     line-height: 80px;
     letter-spacing: 0.2px;
@@ -18,12 +16,10 @@
     height: 52px;
     margin-right: 10px;
     border-radius: 5px;
-    background: var(--primary-color, #ff685b);
+    background: var(--primary-color);
     color: var(--light-text-color, #fff);
     text-align: center;
-    font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -35,13 +31,11 @@
     width: 155px;
     height: 52px;
     border-radius: 5px;
-    border: 1px solid #ff685b;
+    border: 1px solid var(--primary-color);
     background: #fff;
-    color: #ff685b;
+    color: var(--primary-color);
     text-align: center;
-    font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -54,10 +48,18 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .main {
+    &__title {
+      font-size: 5vw;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .main {
     &__title {
-      font-size: 7vw;
+      font-size: 6vw;
     }
   }
   .main__cardsWrapper {
@@ -65,10 +67,27 @@
     align-items: center;
   }
 }
-@media (max-width: 374px) {
+
+@media (max-width: 565px) {
+  .main {
+    &__title {
+      font-size: 7vw;
+      line-height: 50px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 355px;
+  }
   .main {
     &__title {
       font-size: 28px;
+      line-height: 39px;
+    }
+    &__cardsWrapper {
+      margin-top: 0;
     }
   }
 }

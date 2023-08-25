@@ -10,6 +10,7 @@ import {
   setModalActive,
   setAuth,
 } from "../../store/slices/userSlice";
+import "./form.scss";
 
 const Form = () => {
   const [errorAuth, setErrorAuth] = useState(false);
@@ -37,7 +38,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dataUsers.forEach((data) => {
+    dataUsers.find((data) => {
       if (data.login === login && data.password === password) {
         localStorage.setItem("login", login);
         localStorage.setItem("password", password);
@@ -48,14 +49,15 @@ const Form = () => {
       } else {
         setErrorAuth(true);
       }
+      return null;
     });
   };
 
   return (
-    <form className="modal__form" action="">
+    <form className="form" action="">
       Имя
       <input
-        className="enterView__input"
+        className="form__input"
         {...register("login", {
           required: "Поле обязательно к заполнению",
           pattern: {
@@ -72,7 +74,7 @@ const Form = () => {
       ) : null}
       Пароль
       <input
-        className="enterView__input"
+        className="form__input"
         {...register("password", {
           required: "Поле обязательно к заполнению",
           minLength: {
@@ -85,13 +87,11 @@ const Form = () => {
         onChange={(e) => dispatch(setPassword(e.target.value))}
       />
       {errors.password ? (
-        <p className="basketView__form-errorMessage">
-          {errors.password.message}
-        </p>
+        <p className="form__errorMessage">{errors.password.message}</p>
       ) : null}
       <button
         onClick={(e) => handleSubmit(e)}
-        className="modal__submit"
+        className="form__submit"
         type="submit"
       >
         Войти

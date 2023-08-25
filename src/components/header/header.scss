@@ -1,7 +1,7 @@
 .header {
   max-width: 1440px;
   margin: 0 auto;
-  &__header {
+  &__wrapper {
     display: flex;
     align-items: center;
     height: 80px;
@@ -16,11 +16,10 @@
 
   &__contacts {
     margin-right: 49px;
-    color: var(--second-text-color, #737373);
+    color: var(--second-text-color);
     text-align: center;
     font-family: Open Sans;
     font-size: 15px;
-    font-style: normal;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.2px;
@@ -30,14 +29,12 @@
     width: 186px;
     height: 40px;
     border-radius: 7px;
-    border: 2px solid #ff685b;
+    border: 2px solid var(--primary-color);
     background: #fff;
     text-align: center;
-    color: #ff685b;
+    color: var(--primary-color);
     text-align: center;
-    font-family: Montserrat;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
@@ -48,12 +45,26 @@
     width: 90%;
   }
 }
+
 @media (max-width: 767px) {
+  .header__wrapper {
+    padding: 0 5%;
+  }
   .header__enter {
     width: 20vw;
   }
 }
-@media (max-width: 374px) {
+
+@media (max-width: 565px) {
+  .header__contacts {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__wrapper {
+    padding: 0 10px;
+  }
   .header__enter {
     width: 106px;
     height: 36px;

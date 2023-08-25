@@ -14,7 +14,7 @@ const Button = ({ title, className }) => {
       }
       className={className}
     >
-      {title}
+      {localStorage.getItem("login") ? "Выйти" : "Войти"}
     </button>
   );
 };
