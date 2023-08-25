@@ -1,6 +1,16 @@
-// const handleSubmit = (e, dataUsers, login, password) => {
+// const handleSubmit = (
+//   e,
+//   dataUsers,
+//   login,
+//   password,
+//   dispatch,
+//   setModalActive,
+//   setAuth,
+//   navigate,
+//   setErrorAuth
+// ) => {
 //   e.preventDefault();
-//   dataUsers.forEach((data) => {
+//   dataUsers.find((data) => {
 //     if (data.login === login && data.password === password) {
 //       localStorage.setItem("login", login);
 //       localStorage.setItem("password", password);
@@ -9,8 +19,9 @@
 //       localStorage.setItem("auth", true);
 //       return navigate("/account");
 //     } else {
-//       console.log("Неверный логин");
+//       setErrorAuth(true);
 //     }
+//     return null;
 //   });
 // };
 

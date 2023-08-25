@@ -52,6 +52,7 @@
   .main {
     &__title {
       font-size: 5vw;
+      line-height: 60px;
     }
   }
 }
@@ -60,6 +61,7 @@
   .main {
     &__title {
       font-size: 6vw;
+      margin-top: 55px;
     }
   }
   .main__cardsWrapper {
@@ -72,7 +74,7 @@
   .main {
     &__title {
       font-size: 7vw;
-      line-height: 50px;
+      line-height: 39px;
     }
     &__cardsWrapper {
       margin-top: 0;

@@ -40,3 +40,21 @@
     letter-spacing: 0.2px;
   }
 }
+
+@media (max-width: 1024px) {
+  .account__title {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .account {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 565px) {
+  .account {
+    margin-top: 70px;
+  }
+}
