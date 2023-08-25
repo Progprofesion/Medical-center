@@ -6,7 +6,7 @@ const Account = () => {
     <section className="account">
       <div className="container">
         <h2 className="account__title">
-          Привет, {localStorage.getItem("login")}
+          Привет, {localStorage.getItem("name")}
         </h2>
         <div className="account__buttons">
           <Button className="account__exit" title="Выйти из аккаунта" />

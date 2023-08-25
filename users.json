@@ -4,31 +4,25 @@
             "id": 0,
             "login": "Alex",
             "password": "AlexAlexAlex",
-            "name": "Alex"
+            "name": "Алексей"
         },
         {
             "id": 1,
             "login": "George",
             "password": "GeorgeGeorgeGeorge",
-            "name": "George"
+            "name": "Георгий"
         },
         {
             "id": 2,
             "login": "Michael",
             "password": "MichaelMichaelMichael",
-            "name": "Michael"
-        },
-        {
-            "id": 3,
-            "login": "John",
-            "password": "JohnJohnJohn",
-            "name": "John"
+            "name": "Михаил"
         },
         {
             "id": 4,
             "login": "Ivan",
             "password": "IvanIvanIvan",
-            "name": "Ivan"
+            "name": "Иван"
         }
     ]
 }

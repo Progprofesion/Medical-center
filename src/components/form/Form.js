@@ -42,6 +42,7 @@ const Form = () => {
       if (data.login === login && data.password === password) {
         localStorage.setItem("login", login);
         localStorage.setItem("password", password);
+        localStorage.setItem("name", data.name);
         dispatch(setModalActive(false));
         dispatch(setAuth(true));
         localStorage.setItem("auth", true);
@@ -55,7 +56,7 @@ const Form = () => {
 
   return (
     <form className="form" action="">
-      Имя
+      Логин
       <input
         className="form__input"
         {...register("login", {
@@ -66,7 +67,7 @@ const Form = () => {
           },
         })}
         type="text"
-        placeholder="Имя"
+        placeholder="Логин"
         onChange={(e) => dispatch(setLogin(e.target.value))}
       />
       {errors.login ? (
