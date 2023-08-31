@@ -1,4 +1,5 @@
 # Test-task-Aveds
+Medical center
 
 ## Technology stack used
 - react-redux
